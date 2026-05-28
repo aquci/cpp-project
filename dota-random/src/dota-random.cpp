@@ -1,3 +1,5 @@
+//old version of my fav project u can see and build new version in new repo /DotaRandom
+
 #include <iostream>
 #include <string>
 #include <vector>
