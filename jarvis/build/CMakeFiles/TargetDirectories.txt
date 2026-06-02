@@ -1,3 +1,0 @@
-/home/aqusha/cpp-project/jarvis/build/CMakeFiles/jarvis.dir
-/home/aqusha/cpp-project/jarvis/build/CMakeFiles/edit_cache.dir
-/home/aqusha/cpp-project/jarvis/build/CMakeFiles/rebuild_cache.dir
