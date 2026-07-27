@@ -30,7 +30,7 @@ int main()
     {
         std::cout << name[i] << " ";
     }
-    std::cout << " | ";
+    std::cout << "| ";
     for (int a = 0; a < count; a++)
     {
         std::cout << tags[a] << " ";
