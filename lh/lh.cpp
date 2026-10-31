@@ -27,7 +27,7 @@ int main()
     std::cout << "kill: ";
     std::cin >> kill;
 
-    std::cout << "/n miss: ";
+    std::cout << "miss: ";
     std::cin >> miss;
 
     std::cout << "delay: ";
@@ -37,6 +37,36 @@ int main()
         std::cerr << "Invalid input.\n";
         return 1;
     }
+    
+        const int total = kill + miss;
+          if(total == 0) {
+            return 1;
+          }
 
+        const double acc = 100.0 * kill / total;
+
+        std::ofstream file("/home/onion/obsidian/dota/lh.md", std::ios::app);
+
+    if (!file) {
+        std::cerr << "Could not open the file.\n";
+        return 1;
+    }
+
+    file << "1. " << date
+         << " - " << kill << " kill"
+         << ", " << miss << " miss"
+         << ", " << delay << "ms delay"
+         << ", " << std::fixed << std::setprecision(2)
+         << acc << " acc\n";
+
+    if (!file) {
+        std::cerr << "Failed to write to the file.\n";
+        return 1;
+    }
+
+    std::cout << "Training saved. Accuracy: "
+              << std::fixed << std::setprecision(2)
+              << acc << "%\n";
+
+    return 0;  
 }
-
